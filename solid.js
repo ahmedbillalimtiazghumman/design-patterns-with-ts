@@ -8,13 +8,11 @@
 var Journal = /** @class */ (function () {
     function Journal() {
         this.entries = {};
-        this.entries = {};
         this.count = 0;
     }
     Journal.prototype.addEntries = function (text) {
-        ++this.count;
-        console.log(this.count);
-        this.entries[this.count] = "".concat(this.count, ": ").concat(text);
+        var incrementedCount = ++this.count;
+        this.entries[incrementedCount] = "".concat(incrementedCount, ": ").concat(text);
     };
     Journal.prototype.removeEntry = function (index) {
         delete this.entries[index];

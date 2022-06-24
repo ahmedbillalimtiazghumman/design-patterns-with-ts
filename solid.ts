@@ -15,9 +15,8 @@ class Journal {
     }
 
     addEntries(text: string) {
-        ++this.count;
-        console.log(this.count);
-        this.entries[this.count] = `${this.count}: ${text}`;
+        const incrementedCount = ++this.count;
+        this.entries[incrementedCount] = `${incrementedCount}: ${text}`;
     }
 
     removeEntry(index: number) {
